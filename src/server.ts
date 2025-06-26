@@ -1,6 +1,7 @@
 import fastify from "fastify"
 
 import { kx } from "./database"
+import { env } from "./env"
 
 const app = fastify()
 
@@ -15,7 +16,7 @@ app
 
 app
     .listen({
-        port: 3333
+        port: env.PORT
     })
     .then(
         () => {
