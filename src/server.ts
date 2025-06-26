@@ -1,25 +1,8 @@
 import fastify from "fastify"
 
-import { kx } from "./database"
 import { env } from "./env"
+import { transactions } from "./routes/transactions"
 
 const app = fastify()
-
-app
-    .get(
-        '/test',
-        async () => {
-            const tables = await kx('sqlite_schema').select('*')
-            return tables
-        }
-    )
-
-app
-    .listen({
-        port: env.PORT
-    })
-    .then(
-        () => {
-            console.log('Server running!')
-        }
-    )
+app.register(transactions, { prefix: 'transactions' })
+app.listen({ port: env.PORT })
