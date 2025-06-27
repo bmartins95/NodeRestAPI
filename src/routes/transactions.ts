@@ -3,8 +3,6 @@ import { FastifyInstance } from "fastify"
 import { z } from "zod"
 
 import { kx } from "../database"
-import knex from "knex"
-
 
 export async function transactions(app: FastifyInstance) {
     app.get(
