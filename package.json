@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "lint": "eslint . --ext .js,.cjs,.mjs,.ts,.tsx --fix",
-    "knex": "node --import tsx ./node_modules/knex/bin/cli.js"
+    "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
+    "test": "npx vitest test"
   },
   "keywords": [],
   "author": "",
@@ -15,12 +16,15 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.29.0",
     "@types/node": "^24.0.4",
+    "@types/supertest": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^8.35.0",
     "@typescript-eslint/parser": "^8.35.0",
     "eslint": "^9.29.0",
+    "supertest": "^7.1.1",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.35.0"
+    "typescript-eslint": "^8.35.0",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "dotenv": "^16.6.0",
