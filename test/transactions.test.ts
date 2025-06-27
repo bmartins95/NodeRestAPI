@@ -3,7 +3,6 @@ import request from 'supertest'
 
 import { app } from '../src/app'
 import { execSync } from 'node:child_process'
-import { any } from 'zod'
 
 describe('Transactions routes', () => {
     beforeAll(
