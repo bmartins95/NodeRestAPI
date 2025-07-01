@@ -1,7 +1,11 @@
+# folders
 .vscode/
 node_modules/
 tmp/
+build/
 
+# files
 .env
 .env.test
 app.db
+test.db
